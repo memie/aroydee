@@ -29,7 +29,7 @@ class Review extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title,detail, image,name', 'required'),
+			array('title,detail,name', 'required'),
 			array('title', 'length', 'max'=>150),
 			array('image, name', 'length', 'max'=>45),
 			array('detail, post_date', 'safe'),
@@ -57,10 +57,10 @@ class Review extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
-			'detail' => 'Detail',
-			'image' => 'Image',
-			'name' => 'Name',
+			'title' => 'หัวข้อกะทู้รีวิว',
+			'detail' => 'ชื่อเมนูหรือร้านที่รีวิว',
+			'image' => 'รูปประกอบ',
+			'name' => 'ชื่อผู้รีวิว',
 			'post_date' => 'Post Date',
 		);
 	}

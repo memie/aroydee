@@ -122,14 +122,6 @@
 								?>
 								
 								
-								  <form class="navbar-form navbar-left" action="/search/">
-								  <div class="keyword">
-								  <input type="text" class="form-control" placeholder="ค้นหา...">
-								  
-								  </div>
-								  </form>
-								</div>
-								
 								
 							
 							
@@ -158,7 +150,7 @@
 						
 					
 						array('label'=>'ผู้เข้าใช้ระบบ', 'url'=>array('/User/admin'),'visible'=>Yii::app()->user->isAdmin(),),
-						array('label'=>'จัดการประเภทร้าน', 'url'=>array('/type/admin'),),
+						//array('label'=>'จัดการประเภทร้าน', 'url'=>array('/type/admin'),),
 						array('label'=>'จัดการร้าน', 'url'=>array('/menu/admin'),),						
 						array('label'=>'จัดการเมนู', 'url'=>array('/bestSeller/admin'),),
 						array('label'=>'จัดการรีวิว', 'url'=>array('/review/admin'),),	

@@ -37,6 +37,7 @@ $('.search-form form').submit(function(){
 <br><?php echo CHtml::button('เพิ่มรีวิว', array('submit' => array('menu/create'))); ?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
+		'template'=>'{items}{pager}',
 	'id'=>'review-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,

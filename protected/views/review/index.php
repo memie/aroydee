@@ -11,14 +11,23 @@ $this->menu=array(
 	array('label'=>'Manage Review', 'url'=>array('admin')),
 );
 ?>
-<br><br>
-<h1 style="color: #2f97ff">
-<b>รีวิวร้านอาหาร</b> จากสมาชิก อร่อยดี ภูเก็ต</h1>
+<br>
+<h1 style="color: #2f97ff">กะทู้รีวิว</h1>
 
-
-
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'view',
+<?php echo CHtml::button('Create Review', array('submit' => array('review/create'))); ?>
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'review-grid',
+	'dataProvider'=>$model->search(),
+	//'filter'=>$model,
+	'columns'=>array(
+		'id',
+		'title',
+		'detail',
+		'image',
+		'name',
+		'post_date',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
 )); ?>

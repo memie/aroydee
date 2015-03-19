@@ -15,7 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage Review', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Update Review <?php echo $model->id; ?></h1>
+<br><br><br>
+ <h1 style="color: #2f97ff">แก้ไขกะทู้  ที่ <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

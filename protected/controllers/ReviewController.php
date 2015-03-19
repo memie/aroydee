@@ -43,7 +43,7 @@ class ReviewController extends Controller
         				'users'=>array('*'),
         		),
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('admin','update','delete',),
+                'actions'=>array('admin','view','update','delete',),
                 'users'=>$users,
             ),
             array('deny',  // deny all users
@@ -176,20 +176,14 @@ public function actionView($id)
 	 * Lists all models.
 	 */
 	public function actionIndex()
-// 	{
-// 			$model=new Review('search');
-// 		$model->unsetAttributes();  // clear any default values
-// 		if(isset($_GET['Review']))
-// 			$model->attributes=$_GET['Review'];
-
-// 		$this->render('index',array(
-// 			'model'=>$model,
-// 		));
-// 	}
 	{
-		$dataProvider=new CActiveDataProvider('Bestseller');
+			$model=new Review('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Review']))
+			$model->attributes=$_GET['Review'];
+
 		$this->render('index',array(
-				'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
